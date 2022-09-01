@@ -6,10 +6,10 @@ from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from PIL import Image
-import pytesseract  # 用于图片转文字
 #from urllib.request import urlretrieve
 
 one_driver = webdriver.Edge()
+#登入网站之后手动登陆一遍，20秒之后自动获取cookie并保存在cookie.txt文件里
 one_driver.get(r'http://xsyqfk.ytu.edu.cn/Web/Account/ChooseType')
 sleep(20)
 cookies = one_driver.get_cookies()    # 获取cookies
